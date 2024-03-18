@@ -1,0 +1,72 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+#timer-settings {
+  position: fixed;
+  top: 0;
+  left: 50%; /* 화면 가로 중앙에 위치하도록 설정 */
+  transform: translateX(-50%);
+  margin-bottom: 20px;
+}
+
+#timer-settings input,
+#timer-settings button {
+  margin: 5px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#timer-settings button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#timer-display h1 {
+  margin: 5px;
+  text-align: center;
+  font-size: 50px;
+}
+
+#timer-display h2 {
+  margin: 5px;
+  text-align: center;
+  font-size: 150px; /* 시간 초 폰트 크기 조정 */
+}
+
+#progress-bars-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto; /* 필요시 가로 스크롤 허용 */
+  gap: 5px;
+}
+
+.progress-bar {
+  height: 20px;
+  background-color: #eee;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #4CAF50;
+  width: 0%;
+  border-radius: 5px;
+  transition: width 0.5s ease-in-out;
+}
+
+.cycle-gap {
+  width: 10px; /* 사이클 간의 간격 설정 */
+  flex-shrink: 0; /* 간격 유지를 위해 축소 방지 */
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>인터벌 타이머</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="timer-settings">
+        <input type="number" id="prepare-time" placeholder="준비 시간 (초)" min="0">
+        <input type="number" id="work-time" placeholder="운동 시간 (초)" min="1">
+        <input type="number" id="rest-time" placeholder="휴식 시간 (초)" min="0">
+        <input type="number" id="rounds" placeholder="라운드 수" min="1">
+        <input type="number" id="cycles" placeholder="사이클 수" min="1">
+        <input type="number" id="rest-between-cycles" placeholder="사이클 사이 휴식 시간 (초)" min="0">
+        <input type="number" id="cooldown-time" placeholder="쿨 다운 시간 (초)" min="0">
+        <button id="start-btn">시작</button>
+        <button id="pause-btn">일시정지</button>
+        <button id="resume-btn">재개</button>
+    </div>
+    <div id="timer-display">
+        <h1 id="timer-label">준비하세요</h1>
+        <h2 id="time-left">00:00</h2>
+    </div>
+    <div id="progress-bars-container"></div>
+    <script src="script.js"></script>
+</body>
+</html>
